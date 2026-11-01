@@ -1,0 +1,4 @@
+osm_type,osm_id,name,brand,operator,network,latitude,longitude,access,capacity,source_url,snapshot_utc,license,display_name
+node,3612553734,,,,,17.3649588,78.4749286,,,,2026-11-01T06:57:20Z,Open Database License (ODbL),Name not mapped
+node,12990861171,,TGRedCo,,,17.4943813,78.3499994,yes,1.0,https://www.openstreetmap.org/node/12990861171,2026-11-01T06:57:20Z,Open Database License (ODbL),TGRedCo
+way,1299079174,,FreshBus Charging Point,,,17.4048114,78.3333396,private,,https://www.openstreetmap.org/way/1299079174,2026-11-01T06:57:20Z,Open Database License (ODbL),FreshBus Charging Point

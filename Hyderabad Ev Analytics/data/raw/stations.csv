@@ -1,0 +1,31 @@
+station_id,station_name,location,city,latitude,longitude,opening_date,station_type
+ST001,Gachibowli Charging Hub 1,Gachibowli,Hyderabad,17.429363,78.337887,2023-11-02,Highway
+ST002,Gachibowli Charging Hub 2,Gachibowli,Hyderabad,17.440499,78.348975,2023-10-08,Public
+ST003,Gachibowli Charging Hub 3,Gachibowli,Hyderabad,17.439005,78.345323,2024-06-24,Public
+ST004,Madhapur Charging Hub 1,Madhapur,Hyderabad,17.454081,78.394689,2023-11-21,Retail
+ST005,Madhapur Charging Hub 2,Madhapur,Hyderabad,17.451498,78.400414,2023-08-25,Public
+ST006,Madhapur Charging Hub 3,Madhapur,Hyderabad,17.450431,78.392931,2022-12-29,Retail
+ST007,HITEC City Charging Hub 1,HITEC City,Hyderabad,17.448271,78.376301,2024-07-07,Retail
+ST008,HITEC City Charging Hub 2,HITEC City,Hyderabad,17.448491,78.382445,2024-06-25,Public
+ST009,HITEC City Charging Hub 3,HITEC City,Hyderabad,17.455405,78.371938,2024-01-03,Public
+ST010,Kondapur Charging Hub 1,Kondapur,Hyderabad,17.466128,78.364083,2023-08-12,Public
+ST011,Kondapur Charging Hub 2,Kondapur,Hyderabad,17.456683,78.360913,2023-05-26,Public
+ST012,Kondapur Charging Hub 3,Kondapur,Hyderabad,17.465127,78.360008,2022-08-21,Public
+ST013,Banjara Hills Charging Hub 1,Banjara Hills,Hyderabad,17.416201,78.445727,2022-08-27,Public
+ST014,Banjara Hills Charging Hub 2,Banjara Hills,Hyderabad,17.417918,78.446269,2023-02-09,Highway
+ST015,Banjara Hills Charging Hub 3,Banjara Hills,Hyderabad,17.422319,78.446451,2024-05-19,Public
+ST016,Jubilee Hills Charging Hub 1,Jubilee Hills,Hyderabad,17.420976,78.399554,2023-08-11,Retail
+ST017,Jubilee Hills Charging Hub 2,Jubilee Hills,Hyderabad,17.440761,78.399954,2024-09-01,Highway
+ST018,Jubilee Hills Charging Hub 3,Jubilee Hills,Hyderabad,17.417895,78.386316,2023-10-24,Retail
+ST019,Kukatpally Charging Hub 1,Kukatpally,Hyderabad,17.502133,78.386526,2024-05-30,Retail
+ST020,Kukatpally Charging Hub 2,Kukatpally,Hyderabad,17.495628,78.395838,2023-04-05,Retail
+ST021,Kukatpally Charging Hub 3,Kukatpally,Hyderabad,17.49232,78.398068,2024-05-10,Public
+ST022,Secunderabad Charging Hub 1,Secunderabad,Hyderabad,17.436892,78.504207,2024-07-18,Retail
+ST023,Secunderabad Charging Hub 2,Secunderabad,Hyderabad,17.439588,78.49412,2023-06-15,Retail
+ST024,Secunderabad Charging Hub 3,Secunderabad,Hyderabad,17.433958,78.486064,2023-04-02,Public
+ST025,LB Nagar Charging Hub 1,LB Nagar,Hyderabad,17.349285,78.554387,2023-06-18,Public
+ST026,LB Nagar Charging Hub 2,LB Nagar,Hyderabad,17.353207,78.562857,2023-06-05,Public
+ST027,LB Nagar Charging Hub 3,LB Nagar,Hyderabad,17.351903,78.548725,2022-12-06,Public
+ST028,Shamshabad Charging Hub 1,Shamshabad,Hyderabad,17.24018,78.432497,2022-10-31,Public
+ST029,Shamshabad Charging Hub 2,Shamshabad,Hyderabad,17.252274,78.42819,2023-05-01,Retail
+ST030,Shamshabad Charging Hub 3,Shamshabad,Hyderabad,17.234087,78.423553,2022-10-31,Retail

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="EV charging portfolio analytics dashboard with synthetic activity and separate real map references">
+  <title>Hyderabad EV Charging | Analytics dashboard</title>
+  <style>
+    :root { color-scheme:light; --ink:#172a35; --muted:#647782; --teal:#087e78; --teal-light:#e4f4f1; --line:#e4ecea; --paper:#fff; --bg:#f3f7f6; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.5 "Segoe UI",Arial,sans-serif; }
+    .wrap { max-width:1180px; margin:0 auto; padding:34px 24px 48px; }
+    .hero { position:relative; overflow:hidden; padding:34px; border-radius:22px; color:#fff; background:linear-gradient(120deg,#123f48,#087e78 70%,#21a58e); }
+    .eyebrow { margin:0 0 8px; color:#bbebe0; font-size:12px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; }
+    h1 { max-width:720px; margin:0; font-size:clamp(29px,4vw,43px); line-height:1.12; }
+    .hero p:last-child { max-width:700px; margin:14px 0 0; color:#e1f3ef; }
+    .badge { display:inline-flex; margin-top:20px; padding:6px 11px; border:1px solid #ffffff55; border-radius:99px; font-size:12px; }
+    .section-title { margin:30px 0 14px; font-size:19px; }
+    .kpis { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+    .card { min-width:0; padding:20px; border:1px solid var(--line); border-radius:15px; background:var(--paper); box-shadow:0 4px 18px #1c45460a; }
+    .kpi-label { color:var(--muted); font-size:13px; }
+    .kpi-value { margin-top:5px; font-size:clamp(23px,3vw,30px); font-weight:700; letter-spacing:-.03em; }
+    .kpi-note { margin-top:2px; color:var(--muted); font-size:12px; }
+    .charts { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+    .chart-card { padding:18px; }
+    .chart-card h3 { margin:0 0 10px; font-size:15px; }
+    .chart-card img { display:block; width:100%; height:auto; }
+    .chart-wide { grid-column:1/-1; }
+    .chart-wide img { max-width:800px; margin:0 auto; }
+    .tables { display:grid; grid-template-columns:1.2fr .8fr; gap:16px; }
+    .table-card { padding:0; overflow:hidden; }
+    .table-card h3 { margin:0; padding:18px 18px 10px; font-size:15px; }
+    .table-scroll { overflow-x:auto; }
+    table { width:100%; border-collapse:collapse; font-size:13px; }
+    th,td { padding:10px 14px; border-bottom:1px solid var(--line); text-align:left; white-space:nowrap; }
+    th { color:var(--muted); background:#f8fbfa; font-size:11px; letter-spacing:.04em; text-transform:uppercase; }
+    tr:last-child td { border-bottom:0; }
+    .note { margin-top:20px; padding:15px 18px; border-left:3px solid var(--teal); border-radius:8px; background:var(--teal-light); color:#34545a; font-size:13px; }
+    a { color:var(--teal); font-weight:600; }
+    footer { margin-top:24px; color:var(--muted); font-size:12px; }
+    .project-credit { margin:8px 0 0; color:var(--ink); font-size:14px; font-weight:600; text-align:center; }
+    @media(max-width:760px) { .wrap{padding:18px 14px 32px} .hero{padding:26px 22px} .kpis{grid-template-columns:repeat(2,1fr)} .charts,.tables{grid-template-columns:1fr} .chart-wide{grid-column:auto} }
+    @media(max-width:430px) { .kpis{grid-template-columns:1fr} }
+  </style>
+</head>
+<body><main class="wrap">
+  <header class="hero">
+    <p class="eyebrow">Portfolio analytics · Hyderabad</p>
+    <h1>Charging demand, made visible.</h1>
+    <p>Explore station performance, charging demand, energy, and estimated revenue in an end-to-end analytics demo.</p>
+    <span class="badge">Synthetic practice activity · Jan–Dec 2025</span>
+  </header>
+
+  <h2 class="section-title">Network overview <small>(synthetic activity data)</small></h2>
+  <section class="kpis" aria-label="Synthetic activity KPIs">
+    <article class="card"><div class="kpi-label">Completed sessions</div><div class="kpi-value">13,951</div><div class="kpi-note">93.0% of valid synthetic sessions</div></article>
+    <article class="card"><div class="kpi-label">Energy delivered</div><div class="kpi-value">441.2 MWh</div><div class="kpi-note">Synthetic completed sessions</div></article>
+    <article class="card"><div class="kpi-label">Estimated revenue</div><div class="kpi-value">₹66.17 L</div><div class="kpi-note">Generated tariff × generated energy</div></article>
+    <article class="card"><div class="kpi-label">Stations represented</div><div class="kpi-value">30</div><div class="kpi-note">Synthetic station records</div></article>
+    <article class="card"><div class="kpi-label">Average session duration</div><div class="kpi-value">52.8 min</div><div class="kpi-note">Synthetic completed sessions</div></article>
+    <article class="card"><div class="kpi-label">Sessions analyzed</div><div class="kpi-value">15,000</div><div class="kpi-note">Generated for portfolio practice</div></article>
+  </section>
+
+  <h2 class="section-title">Demand and revenue patterns <small>(synthetic)</small></h2>
+  <section class="charts">
+    <article class="card chart-card"><h3>Completed sessions by start hour</h3><img src="figures/demand_by_hour.png" alt="Synthetic line chart of completed sessions by hour"></article>
+    <article class="card chart-card"><h3>Estimated revenue by month</h3><img src="figures/monthly_revenue.png" alt="Synthetic monthly estimated revenue line chart"></article>
+    <article class="card chart-card chart-wide"><h3>Sessions by Hyderabad location</h3><img src="figures/sessions_by_location.png" alt="Synthetic session counts by location bar chart"></article>
+  </section>
+
+  <h2 class="section-title">Location and monthly performance <small>(synthetic)</small></h2>
+  <section class="tables">
+    <article class="card table-card"><h3>Top locations by completed sessions</h3><div class="table-scroll"><table>
+      <thead><tr><th>Location</th><th>Sessions</th><th>Energy (kWh)</th><th>Est. revenue</th></tr></thead><tbody><tr><td>HITEC City</td><td>1,696</td><td>53,900.7</td><td>₹805,306</td></tr>
+<tr><td>Gachibowli</td><td>1,625</td><td>50,687.2</td><td>₹761,834</td></tr>
+<tr><td>Madhapur</td><td>1,619</td><td>51,431.1</td><td>₹768,444</td></tr>
+<tr><td>Kondapur</td><td>1,324</td><td>41,768.8</td><td>₹627,652</td></tr>
+<tr><td>Shamshabad</td><td>1,293</td><td>40,650.7</td><td>₹608,269</td></tr>
+<tr><td>LB Nagar</td><td>1,290</td><td>40,367.2</td><td>₹605,839</td></tr>
+<tr><td>Banjara Hills</td><td>1,283</td><td>40,891.7</td><td>₹613,938</td></tr>
+<tr><td>Kukatpally</td><td>1,281</td><td>39,745.4</td><td>₹598,705</td></tr></tbody>
+    </table></div></article>
+    <article class="card table-card"><h3>Monthly performance</h3><div class="table-scroll"><table>
+      <thead><tr><th>Month</th><th>Sessions</th><th>Est. revenue</th></tr></thead><tbody><tr><td>2025-01</td><td>1,206</td><td>₹579,834</td></tr>
+<tr><td>2025-02</td><td>1,010</td><td>₹499,596</td></tr>
+<tr><td>2025-03</td><td>1,144</td><td>₹521,921</td></tr>
+<tr><td>2025-04</td><td>1,134</td><td>₹530,177</td></tr>
+<tr><td>2025-05</td><td>1,223</td><td>₹579,437</td></tr>
+<tr><td>2025-06</td><td>1,180</td><td>₹558,096</td></tr>
+<tr><td>2025-07</td><td>1,225</td><td>₹578,006</td></tr>
+<tr><td>2025-08</td><td>1,153</td><td>₹556,016</td></tr>
+<tr><td>2025-09</td><td>1,122</td><td>₹534,219</td></tr>
+<tr><td>2025-10</td><td>1,116</td><td>₹532,534</td></tr>
+<tr><td>2025-11</td><td>1,146</td><td>₹538,794</td></tr>
+<tr><td>2025-12</td><td>1,292</td><td>₹607,917</td></tr></tbody>
+    </table></div></article>
+  </section>
+
+  <aside class="note"><strong>Data honesty:</strong> session-level KPIs, charts, rankings, and estimated revenue on this page come from synthetic practice data. They are not actual Hyderabad network measurements.</aside>
+  <h2 class="section-title">Real public map references</h2>
+  <article class="card table-card"><h3>3 separate OpenStreetMap objects · not joined to synthetic sessions</h3><div class="table-scroll"><table>
+    <thead><tr><th>Mapped name or brand</th><th>OSM object</th><th>Coordinates</th><th>Source</th></tr></thead>
+    <tbody><tr><td>Name not mapped</td><td>Node #3612553734</td><td>17.364959, 78.474929</td><td><a href="https://www.openstreetmap.org/node/3612553734" target="_blank" rel="noreferrer">OSM record</a></td></tr>
+<tr><td>TGRedCo</td><td>Node #12990861171</td><td>17.494381, 78.349999</td><td><a href="https://www.openstreetmap.org/node/12990861171" target="_blank" rel="noreferrer">OSM record</a></td></tr>
+<tr><td>FreshBus Charging Point</td><td>Way #1299079174</td><td>17.404811, 78.333340</td><td><a href="https://www.openstreetmap.org/way/1299079174" target="_blank" rel="noreferrer">OSM record</a></td></tr></tbody>
+  </table></div></article>
+  <aside class="note"><strong>Reference limitations:</strong> OpenStreetMap coverage can be incomplete or out of date. Map records do not confirm current operation. © OpenStreetMap contributors; data available under the <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">ODbL</a>.</aside>
+  <footer>Rebuild synthetic datasets and charts with <code>python scripts\generate_data.py</code> and the EDA notebook; then regenerate this page with <code>python scripts\build_dashboard.py</code>.</footer>
+  <p class="project-credit">A Project Build by Jamalpur Sai Chaithanya</p>
+</main></body></html>
